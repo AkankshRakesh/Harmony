@@ -12,7 +12,7 @@ export function Header() {
             <img src="/logo-white.png" alt="Harmony Logo" className="w-6 h-6" />
           </div>
           <span className="text-xl font-semibold text-foreground">Harmony</span>
-        </div>
+        </div> 
 
         <nav className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition">
