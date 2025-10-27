@@ -1,0 +1,21 @@
+{
+  "name": "harmony-backend",
+  "version": "0.1.0",
+  "description": "Minimal backend for Harmony - provides simple API endpoints for the frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
