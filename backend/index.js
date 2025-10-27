@@ -6,17 +6,14 @@ const path = require('path')
 const app = express()
 const PORT = process.env.PORT || 4000
 
-// Basic middleware
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
 
-// Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: Date.now() })
 })
 
-// Simple features endpoint - mirrors frontend features list
 app.get('/api/features', (req, res) => {
   const features = [
     {
@@ -43,10 +40,8 @@ app.get('/api/features', (req, res) => {
   res.json({ features })
 })
 
-// Serve static files (optional)
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Harmony backend listening on http://localhost:${PORT}`)
 })
