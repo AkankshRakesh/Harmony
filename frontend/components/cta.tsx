@@ -15,13 +15,13 @@ export function CTA() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Ready to Prioritize Your Mental Health?
+            Ready to Modernize Your Clinical Workflows?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
-            Join thousands of people building a healthier, happier life together. Start your journey today.
+            Try HealthSync EMR — secure, interoperable EMR built for hospitals and clinics. Request a demo or start a trial today.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-            Join Harmony Now <ArrowRight className="w-4 h-4" />
+            Request a Demo <ArrowRight className="w-4 h-4" />
           </Button>
         </motion.div>
       </div>

@@ -7,20 +7,20 @@ import { motion } from "framer-motion"
 const testimonials = [
   {
     name: "Sarah M.",
-    role: "Community Member",
-    content: "Harmony helped me feel less alone. The community is so welcoming and understanding.",
+    role: "Clinic Administrator",
+    content: "HealthSync EMR helped our clinic reduce documentation time and improve patient handoffs.",
     rating: 5,
   },
   {
     name: "James T.",
-    role: "Active Participant",
-    content: "The resources and support groups have been invaluable to my mental health journey.",
+    role: "Physician",
+    content: "Integrations with labs and imaging streamlined our workflow and reduced turnaround.",
     rating: 5,
   },
   {
     name: "Emma L.",
-    role: "Community Member",
-    content: "Finally found a space where I can be myself without judgment. Highly recommend!",
+    role: "Nurse Manager",
+    content: "Secure, easy-to-use EMR that supports our clinical workflows.",
     rating: 5,
   },
 ]
@@ -56,9 +56,9 @@ export function Community() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Loved by Our Community</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Trusted by Care Teams</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Hear from members who've found support and connection on Harmony.
+            Hear from clinics and hospitals using HealthSync EMR to improve care coordination and outcomes.
           </p>
         </motion.div>
 

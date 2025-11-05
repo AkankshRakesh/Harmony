@@ -31,12 +31,11 @@ export default function Header({ onSidebarToggle }: HeaderProps) {
         
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <img src="/logo-white.png" alt="Harmony" className="w-5 h-5" />
+            <img src="/logo-white.png" alt="HealthSync" className="w-5 h-5" />
           </div>
-          <span className="hidden sm:inline text-sm font-semibold text-foreground">Harmony</span>
+          <span className="hidden sm:inline text-sm font-semibold text-foreground">HealthSync</span>
         </Link>
 
-        {/* Avatar / user placeholder */}
         <button
           aria-label="Open user menu"
           className="w-9 h-9 rounded-full bg-gradient-blue-purple flex items-center justify-center"

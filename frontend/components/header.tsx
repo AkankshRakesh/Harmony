@@ -10,9 +10,9 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <img src="/logo-white.png" alt="Harmony Logo" className="w-6 h-6" />
+            <img src="/logo-white.png" alt="HealthSync Logo" className="w-6 h-6" />
           </div>
-          <span className="text-xl font-semibold text-foreground">Harmony</span>
+          <span className="text-xl font-semibold text-foreground">HealthSync</span>
         </div> 
 
         <nav className="hidden md:flex items-center gap-8">

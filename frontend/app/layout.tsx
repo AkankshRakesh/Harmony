@@ -17,8 +17,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Harmony",
-  description: "Harmony - Mental Health as a community",
+  title: "HealthSync",
+  description: "HealthSync EMR - Clinical interoperability and secure EMR workflows",
 }
 
 export default function RootLayout({

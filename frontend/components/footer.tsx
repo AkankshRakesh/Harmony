@@ -8,11 +8,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                <img src="/logo-white.png" alt="Harmony Logo" className="w-6 h-6" />
+                <img src="/logo-white.png" alt="HealthSync Logo" className="w-6 h-6" />
               </div>
-              <span className="font-semibold text-foreground">Harmony</span>
+              <span className="font-semibold text-foreground">HealthSync EMR</span>
             </div>
-            <p className="text-sm text-muted-foreground">Supporting mental health, one connection at a time.</p>
+            <p className="text-sm text-muted-foreground">Enterprise EMR, interoperability, and clinical workflows for modern clinics and hospitals.</p>
           </div>
 
           <div>
@@ -30,7 +30,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition">
-                  Security
+                  Integrations
                 </a>
               </li>
             </ul>
@@ -41,17 +41,17 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground transition">
-                  Blog
+                  Documentation
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition">
-                  Guides
+                  API Reference
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition">
-                  Support
+                  Integrations
                 </a>
               </li>
             </ul>
@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition">
-                  Contact
+                  Contact Sales
                 </a>
               </li>
             </ul>
@@ -80,7 +80,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 Harmony. All rights reserved. Your mental health matters.</p>
+          <p>&copy; 2025 HealthSync EMR. All rights reserved. Built for secure clinical workflows and interoperability.</p>
         </div>
       </div>
     </footer>
