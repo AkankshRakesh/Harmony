@@ -18,7 +18,7 @@ export function CTA() {
             Ready to Modernize Your Clinical Workflows?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
-            Try HealthSync EMR — secure, interoperable EMR built for hospitals and clinics. Request a demo or start a trial today.
+            Try HealthSync EMR, a secure, interoperable EMR built for hospitals and clinics. Request a demo or start a trial today.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
             Request a Demo <ArrowRight className="w-4 h-4" />

@@ -45,6 +45,12 @@ export function Hero() {
   const [fhirPreview, setFhirPreview] = useState<string | null>(null)
   const [sending, setSending] = useState(false)
   const [sendLog, setSendLog] = useState<string | null>(null)
+  const [toast, setToast] = useState<string | null>(null)
+
+  function showToast(message: string, ms = 3000) {
+    setToast(message)
+    setTimeout(() => setToast(null), ms)
+  }
 
   // Detect mobile screens
   useEffect(() => {
@@ -151,6 +157,8 @@ export function Hero() {
     await new Promise((r) => setTimeout(r, 700))
     setSending(false)
     setSendLog('FHIR payload successfully sent to mock EMR (simulated).')
+    // Inform the user they need to log in to save real patient records
+    showToast('Log in to save patient records to EMR')
   }
 
 
@@ -166,6 +174,12 @@ export function Hero() {
 
   return (
     <div ref={containerRef} className="overflow-hidden">
+      {/* Toast - simple inline implementation for quick user feedback */}
+      {toast && (
+        <div className="fixed bottom-6 right-6 z-50">
+          <div className="bg-primary text-primary-foreground px-4 py-2 rounded shadow-lg">{toast}</div>
+        </div>
+      )}
       {/* Animated shadow CSS omitted for brevity; keep unchanged */}
 
       <section className="relative py-12 md:py-20">
