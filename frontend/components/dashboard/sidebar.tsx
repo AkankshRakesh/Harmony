@@ -11,8 +11,8 @@ interface SidebarProps {
 }
 
 const menuItems = [
-  { href: "/", label: "Dashboard", icon: Home },
-  { href: "/codes", label: "ICD-11 Codes", icon: BookOpen },
+  { href: "/dashboard", label: "Dashboard", icon: Home },
+  { href: "/dashboard/icd11", label: "ICD-11 Codes", icon: BookOpen },
   { href: "/patients", label: "Patients", icon: Users },
   { href: "/namaste", label: "NAMASTE", icon: Stethoscope },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -81,7 +81,6 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
         </Link>
       </div>
 
-      {/* Mobile Sidebar */}
       {open && (
         <div className="md:hidden fixed inset-0 z-30 bg-black/50">
           <div className="w-64 h-screen bg-sidebar border-r border-sidebar-border flex flex-col">
