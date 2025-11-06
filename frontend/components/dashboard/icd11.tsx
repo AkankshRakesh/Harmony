@@ -71,7 +71,7 @@ export default function ICD11Sidebar({ onSelectAction }: { onSelectAction?: (ite
 			</div>
 
 			<div className="relative">
-				<input
+				<input   
 					aria-label="Search ICD-11"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
