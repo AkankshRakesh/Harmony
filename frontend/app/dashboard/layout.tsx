@@ -26,7 +26,9 @@ export default function DashLayout({ children }: { children: React.ReactNode }) 
     <div className={`${poppins.variable} ${inter.variable} flex min-h-screen bg-background font-sans`}> 
       <Sidebar open={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
 
-      <div className="flex-1 flex flex-col overflow-hidden transition-all duration-300">
+      <div className={`flex-1 flex flex-col overflow-hidden transition-[padding-left] duration-300 ease-in-out ${
+        sidebarOpen ? 'md:pl-64' : 'md:pl-0'
+      }`}>
         <Header onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
 
         <main className="flex-1 overflow-auto">
