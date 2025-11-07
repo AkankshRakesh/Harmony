@@ -5,6 +5,23 @@ import { Menu, X, Home, BookOpen, Users, Stethoscope, Settings, Search, Bell, Lo
 import { Button } from "@/components/ui/button"
 import { Input } from "../ui/input"
 import ThemeToggle from "../theme-toggle"
+import { useAuth } from "@/lib/auth"
+
+function LogoutButton() {
+  const { logout } = useAuth()
+  return (
+    <Button
+      variant="destructive"
+      size="lg"
+      className="w-full justify-start gap-3 text-white"
+      onClick={() => void logout()}
+      aria-label="Logout"
+    >
+      <LogOut className="w-5 h-5" />
+      <span className="text-base">Logout</span>
+    </Button>
+  )
+}
 
 interface SidebarProps {
   open: boolean
@@ -57,19 +74,10 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
             )
           })}
         </nav>
-          <Button
-            variant="destructive"
-            size="lg"
-            className="w-full justify-start gap-3 text-white"
-            onClick={() => {
-              localStorage.removeItem("hs_token")
-              window.location.href = "/"
-            }}
-            aria-label="Logout"
-          >
-            <LogOut className="w-5 h-5" />
-            <span className="text-base">Logout</span>
-          </Button>
+        <div className="p-4">
+          
+          <LogoutButton />
+        </div>
       </div>
 
       {/* Mobile Sidebar Toggle */}
@@ -120,19 +128,7 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
               })}
             </nav>
             <div className="p-4">
-              <Button
-                variant="destructive"
-                size="lg"
-                className="w-full justify-start gap-3 text-white"
-                onClick={() => {
-                  localStorage.removeItem("hs_token")
-                  window.location.href = "/"
-                }}
-                aria-label="Logout"
-              >
-                <LogOut className="w-5 h-5" />
-                <span className="text-base">Logout</span>
-              </Button>
+              <LogoutButton />
             </div>
           </div>
         </div>

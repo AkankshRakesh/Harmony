@@ -83,7 +83,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return data.user || null
   }
 
-  async function signup(payload: { email: string; password: string; role?: string; profile?: any }, remember = true) {
+  async function signup(payload: { email: string; password: string; role?: string; profile?: any }, remember = false) {
     const res = await fetch('/api/auth/signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
     const data = await res.json()
     if (!res.ok) throw new Error(data?.error || 'Signup failed')

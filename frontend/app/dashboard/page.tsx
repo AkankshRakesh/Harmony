@@ -1,3 +1,5 @@
+"use client"
+
 import EMRDashboard from '@/components/dashboard/emr-dashboard'
 import AuthGuard from '@/components/auth-guard'
 

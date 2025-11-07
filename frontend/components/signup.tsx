@@ -61,10 +61,10 @@ export function Signup() {
         setError("Please complete your name, email and password.")
         return
       }
-      if (!license.trim()) {
-        setError("Please enter your medical license number.")
-        return
-      }
+      // if (!license.trim()) {
+      //   setError("Please enter your medical license number.")
+      //   return
+      // }
       if (!selectedOrg) {
         setError("Please select your organization from the list.")
         return
@@ -87,7 +87,7 @@ export function Signup() {
         ? { email, password, role, profile: { name: doctorName, license, specialty, organizationId: selectedOrg } }
         : { email, password, role, profile: { organization: orgName, admin: adminName } }
 
-      await auth.signup(payload, true)
+  await auth.signup(payload)
       router.push('/dashboard')
     } catch (err: any) {
       setError(err?.message || 'Signup failed')

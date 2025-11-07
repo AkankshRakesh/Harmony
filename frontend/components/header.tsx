@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
 import ThemeToggle from './theme-toggle'
 import Link from 'next/link'
+import { useAuth } from '@/lib/auth'
 
 export function Header() {
   return (
@@ -29,15 +30,42 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/login">
-            <Button variant="ghost" className="text-sm hidden md:block">
-              Sign In
-            </Button>
-          </Link>
-          <Link href="/dashboard">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
-          </Link>
-          <ThemeToggle />
+          {(() => {
+            const { user, loading } = useAuth()
+            if (loading) {
+              return (
+                <div className="flex items-center gap-3">
+                  <div className="w-24 h-8 bg-muted/20 rounded animate-pulse" />
+                  <ThemeToggle />
+                </div>
+              )
+            }
+
+            if (user) {
+              return (
+                <>
+                  <Link href="/dashboard">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Go to dashboard</Button>
+                  </Link>
+                  <ThemeToggle />
+                </>
+              )
+            }
+
+            return (
+              <>
+                <Link href="/login">
+                  <Button variant="ghost" className="text-sm hidden md:block">
+                    Sign In
+                  </Button>
+                </Link>
+                <Link href="/signup">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
+                </Link>
+                <ThemeToggle />
+              </>
+            )
+          })()}
         </div>
       </div>
     </header>
