@@ -28,9 +28,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" className="text-sm">
-            Sign In
-          </Button>
+          <Link href="/login">
+            <Button variant="ghost" className="text-sm">
+              Sign In
+            </Button>
+          </Link>
           <Link href="/dashboard">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
           </Link>

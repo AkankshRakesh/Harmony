@@ -56,7 +56,12 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
             )
           })}
         </nav>
-
+          <Button onClick={() => {
+              localStorage.removeItem("hs_token");
+              window.location.href = "/";
+            }}>
+                Logout
+            </Button>
         <div className="p-4 border-t border-sidebar-border">
           <p className="text-xs text-sidebar-foreground/60">v1.0.0</p>
         </div>
@@ -79,6 +84,7 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
             <img src="/logo-white.png" alt="HealthSync" className="w-5 h-5" />
           </div>
         </Link>
+        
       </div>
 
       {open && (
@@ -110,6 +116,12 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
                 )
               })}
             </nav>
+            <Button onClick={() => {
+              localStorage.removeItem("hs_token");
+              window.location.href = "/";
+            }}>
+                Logout
+            </Button>
           </div>
         </div>
       )}
